@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".View.RegisterForm"
+    android:scrollbarSize="20dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/RegisterForm_Login_btn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RegisterForm_forget_pass_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/customer_button"
+            android:text="Log In"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/RegisterForm_forget_pass_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/RegisterForm_password_txt"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Forget Password?"
+            android:textColor="@color/customer_color2"
+            android:tooltipText="Forget Password" />
+
+        <TextView
+            android:id="@+id/RegisterForm_text_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Log In"
+            android:textColor="@android:color/black"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/RegisterForm_login_with_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RegisterForm_Login_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="or login with"
+            android:textColor="@android:color/black" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/RegisterForm_user_name_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RegisterForm_image_profile"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            app:errorEnabled="true">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/user_name"
+                android:drawablePadding="10dp"
+                android:hint="User Name"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:tooltipText="User Name" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/RegisterForm_password_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/RegisterForm_user_name_txt"
+            android:layout_alignLeft="@id/RegisterForm_user_name_txt"
+            android:layout_alignRight="@id/RegisterForm_user_name_txt"
+            android:layout_alignStart="@id/RegisterForm_user_name_txt"
+            android:layout_below="@id/RegisterForm_user_name_txt"
+            android:layout_marginTop="20dp"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true"
+            >
+
+            <EditText
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:drawableLeft="@drawable/password"
+                android:drawableStart="@drawable/password"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:tooltipText="Password" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/RegisterForm_image_profile"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/RegisterForm_text_login"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/profile" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/RegisterForm_facebook_icion"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@id/RegisterForm_Login_btn"
+            android:layout_alignStart="@id/RegisterForm_Login_btn"
+            android:layout_below="@id/RegisterForm_login_with_txt"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/facebook1" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/RegisterForm_google_icion"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/RegisterForm_login_with_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/google1" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/RegisterForm_twitter_icion"
+            android:layout_width="50dp"
+            android:layout_height="75dp"
+            android:layout_alignEnd="@id/RegisterForm_Login_btn"
+            android:layout_alignRight="@id/RegisterForm_Login_btn"
+            android:layout_below="@id/RegisterForm_login_with_txt"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/twitter" />
+
+        <TextView
+            android:textAllCaps="false"
+            android:id="@+id/RegisterForm_sign_up"
+            android:layout_alignStart="@id/RegisterForm_Login_btn"
+            android:text="You Don't have an account?Sign Up"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/RegisterForm_facebook_icion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_alignLeft="@id/RegisterForm_Login_btn" />
+
+    </RelativeLayout>
+
+
+</ScrollView>

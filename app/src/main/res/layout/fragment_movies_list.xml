@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/flasScreenColor"
+    android:orientation="vertical"
+    tools:context=".View.Mainform">
+
+    <!--
+    -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/movieslist_movies_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            tools:listitem="@layout/type_movies_cardview" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/movieslist_movies_type"
+            android:id="@+id/movieslist_movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            tools:listitem="@layout/layout_movie_cardview" />
+
+    </RelativeLayout>
+
+</ScrollView>
